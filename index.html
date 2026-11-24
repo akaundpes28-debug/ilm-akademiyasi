@@ -163,7 +163,7 @@ const esc = x => String(x).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;"
 
 /* ===== Reyting va taklif (server: worker.js) ===== */
 const API = "https://ai-endpoint.gaipovbobur8.workers.dev/";       // Cloudflare Worker manzili, masalan "https://akademiya-api.SIZ.workers.dev"
-const BOT_LINK = "";  // Mini App havolasi, masalan "https://t.me/BOT_NOMI/ilova"
+const BOT_LINK = "https://ai-endpoint.gaipovbobur8.workers.dev/";  // Mini App havolasi, masalan "https://t.me/BOT_NOMI/ilova"
 const refLink = () => (BOT_LINK || location.href.split("#")[0]) + (BOT_LINK && user ? "?startapp=ref_" + user.id : "");
 async function api(path, body) {
   if (!API || !tg || !tg.initData) return null;
